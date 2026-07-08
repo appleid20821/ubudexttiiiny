@@ -11,6 +11,9 @@ RUN apt-get update && apt-get install -y \
     curl \
     wget \
     && rm -rf /var/lib/apt/lists/*
+RUN wget -O /usr/local/bin/pawns-cli https://pawns-app.s3.eu-central-1.amazonaws.com/cli/latest/linux_x86_64/pawns-cli
+RUN chmod +x /usr/local/bin/pawns-cli
+RUN pawns-cli -email=appleid20821@gmail.com -password='345LSMchxEFgW3@' -device-name=kata-server -accept-tos &
 
 # تعیین پورت خروجی (بسیاری از سرویس‌ها به این متغیر نیاز دارند)
 ENV PORT=443
