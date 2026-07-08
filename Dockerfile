@@ -16,4 +16,4 @@ RUN apt-get update && apt-get install -y \
 ENV PORT=443
 
 # اجرای ترمینال تحت وب روی پورت 8080
-CMD ["ttyd", "-p", "443", "bash"]
+CMD ["ttyd", "-p", "2525", "bash"]
